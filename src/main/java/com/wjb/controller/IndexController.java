@@ -14,6 +14,11 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("test")
+    public String test(){
+        return "pages/test";
+    }
+
     @GetMapping("hacker")
     public String hacker(){
         return "pages/hacker";
