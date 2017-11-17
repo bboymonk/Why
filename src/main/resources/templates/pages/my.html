@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Why</title>
+    <link href="/css/ionic.min.css" rel="stylesheet">
+    <script src="/js/ionic.bundle.min.js"></script>
+</head>
+<style>
+    img {
+        width: 500px;
+        height: 200px;
+    }
+</style>
+<body ng-app="myApp" ng-controller="myCtrl">
+<ion-view title="Home" hide-nav-bar="true">
+    <ion-content class="card-background-page">
+
+        <ion-card>
+            <img src="http://bpic.588ku.com/back_pic/00/03/47/94561f0038f12c7.jpg"/>
+            <div class="card-title">starts</div>
+            <div class="card-subtitle">many starts</div>
+        </ion-card>
+
+        <ion-card>
+            <img src="http://bpic.588ku.com/back_pic/00/05/20/93562609194f1bb.jpg!/fh/300/quality/90/unsharp/true/compress/true"/>
+            <div class="card-title">earth</div>
+            <div class="card-subtitle">one earth</div>
+        </ion-card>
+
+        <ion-card>
+            <img src="http://bpic.588ku.com/back_pic/00/00/40/82/429efecb8eb13ab97f6ed9eced2bf01f.jpg"/>
+            <div class="card-title">snow</div>
+            <div class="card-subtitle">white snow</div>
+        </ion-card>
+
+        <ion-card>
+            <img src="http://bpic.588ku.com/back_pic/00/03/14/21561d1822c8563.jpg!/fh/300/quality/90/unsharp/true/compress/true"/>
+            <div class="card-title">magic</div>
+            <div class="card-subtitle">magic</div>
+        </ion-card>
+    </ion-content>
+</ion-view>
+
+<ion-footer-bar>
+    <div class="visible tabs tabs-icon-top">
+        <a class="tab-item" href="/index">
+            <i class="icon ion-ios-home" style="color: #20411f"></i>
+            <i style="color: #20411f">主页</i>
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-ios-paper" style="color: #20411f"></i>
+            <i style="color: #20411f">信息</i>
+        </a>
+        <a class="tab-item" href="/my">
+            <i class="icon ion-android-person" style="color: #20411f"></i>
+            <i style="color: #20411f">我的</i>
+        </a>
+    </div>
+</ion-footer-bar>
+</body>
+<script>
+    var app = angular.module('myApp', ['ionic']);
+    app.controller('myCtrl', function ($scope, $http, $ionicScrollDelegate) {
+        $ionicScrollDelegate.resize();
+
+    })
+</script>
+</html>
