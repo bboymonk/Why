@@ -8,49 +8,53 @@
     <script src="/js/ionic.bundle.min.js"></script>
 
 </head>
+<style>
+    ion-list img{
+        width: 40px;
+        height: 40px;
+    }
+</style>
 <body ng-app="indexApp" ng-controller="indexCtrl">
 
 <ion-side-menus>
     <!-- 中间内容 -->
     <ion-side-menu-content>
         <ion-content>
-            <div class="item item-image">
+
+            <div class="item item-image" style="width: 500px;height: 150px;">
                 <img ng-src="{{src}}"/>
             </div>
 
+            <ion-list>
+                <ion-list-header></ion-list-header>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="http://bpic.588ku.com/back_pic/00/02/38/985617612c20a1e.jpg">
+                    </ion-avatar>
+                    <h2>Woody</h2>
+                    <p>This town ain't big enough for the two of us!</p>
+                    <ion-note item-end>3:43 pm</ion-note>
+                </ion-item>
 
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="http://bpic.588ku.com/back_pic/00/02/23/365614dbcddb654.jpg">
+                    </ion-avatar>
+                    <h2>Buzz Lightyear</h2>
+                    <p>My eyeballs could have been sucked from their sockets!</p>
+                    <ion-note item-end>1:12 pm</ion-note>
+                </ion-item>
 
-            <ion-fab bottom right >
-                <button ion-fab>Share</button>
-                <ion-fab-list side="top">
-                    <button ion-fab>Facebook</button>
-                    <button ion-fab>Twitter</button>
-                    <button ion-fab>Youtube</button>
-                </ion-fab-list>
-                <ion-fab-list side="left">
-                    <button ion-fab>Vimeo</button>
-                </ion-fab-list>
-            </ion-fab>
+                <ion-item>
+                    <ion-avatar item-start>
+                        <img src="http://bpic.588ku.com/back_pic/00/02/37/0356173582d4c95.jpg">
+                    </ion-avatar>
+                    <h2>Buzz Lightyear</h2>
+                    <p>My eyeballs could have been sucked from their sockets!</p>
+                    <ion-note item-end>1:12 pm</ion-note>
+                </ion-item>
 
-
-
-            <ion-fab center middle>
-                <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
-                <ion-fab-list side="top">
-                    <button ion-fab color="primary"><ion-icon name="logo-vimeo"></ion-icon></button>
-                </ion-fab-list>
-                <ion-fab-list side="bottom">
-                    <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>
-                </ion-fab-list>
-                <ion-fab-list side="left">
-                    <button ion-fab color="light"><ion-icon name="logo-googleplus"></ion-icon></button>
-                </ion-fab-list>
-                <ion-fab-list side="right">
-                    <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
-                </ion-fab-list>
-            </ion-fab>
-
-
+            </ion-list>
 
 
         </ion-content>
@@ -58,24 +62,26 @@
     <!-- 左侧菜单 -->
     <ion-side-menu side="left">
         <header class="bar bar-header bar-stable">
-            <h1 class="title">Left</h1>
+            <div class="item item-image">
+                <img src="http://bpic.588ku.com/back_pic/00/05/67/31562759dd13a5f.jpg"/>
+            </div>
         </header>
         <ion-content class="has-header">
             <ion-list>
-                <ion-item nav-clear menu-close href="#">
-                    历史
+                <ion-item nav-clear menu-close href="/hacker">
+                    <h2>历史</h2>
                 </ion-item>
                 <ion-item nav-clear menu-close href="#">
-                    历史
+                    <h2>历史</h2>
                 </ion-item>
                 <ion-item nav-clear menu-close href="#">
-                    历史
+                    <h2>历史</h2>
                 </ion-item>
                 <ion-item nav-clear menu-close href="#">
-                    历史
+                    <h2>历史</h2>
                 </ion-item>
                 <ion-item nav-clear menu-close href="#">
-                    历史
+                    <h2>历史</h2>
                 </ion-item>
             </ion-list>
         </ion-content>
@@ -83,30 +89,32 @@
 
     <!-- 右侧菜单 -->
     <ion-side-menu side="right">
-        right
+        <div>
+            <img src="http://bpic.588ku.com/back_pic/00/05/67/31562759dd13a5f.jpg"/>
+        </div>
     </ion-side-menu>
 </ion-side-menus>
 
 <ion-footer-bar>
-<div class="visible tabs tabs-icon-top">
-    <a class="tab-item" href="#">
-        <i class="icon ion-ios-home" style="color: #20411f"></i>
-        <i style="color: #20411f">主页</i>
-    </a>
-    <a class="tab-item" href="#">
-        <i class="icon ion-ios-paper" style="color: #20411f"></i>
-        <i style="color: #20411f">信息</i>
-    </a>
-    <a class="tab-item" href="/my">
-        <i class="icon ion-android-person" style="color: #20411f"></i>
-        <i style="color: #20411f">我的</i>
-    </a>
-</div>
+    <div class="visible tabs tabs-icon-top">
+        <a class="tab-item" href="#">
+            <i class="icon ion-ios-home" style="color: #20411f"></i>
+            <i style="color: #20411f">主页</i>
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-ios-paper" style="color: #20411f"></i>
+            <i style="color: #20411f">信息</i>
+        </a>
+        <a class="tab-item" href="/my">
+            <i class="icon ion-android-person" style="color: #20411f"></i>
+            <i style="color: #20411f">我的</i>
+        </a>
+    </div>
 </ion-footer-bar>
 </body>
 <script type="text/javascript">
     var app = angular.module('indexApp', ['ionic']);
-    app.controller('indexCtrl', function ($scope, $http,$interval,$timeout) {
+    app.controller('indexCtrl', function ($scope, $http, $interval, $timeout) {
         $scope.src = null;
         $scope.images = null;
 
@@ -121,12 +129,6 @@
             var num = 0 + Math.round(Rand * Range); //四舍五入
             $scope.src = $scope.images[num];
         }, 5000);
-
-
-
-
-
-
 
 
     })
