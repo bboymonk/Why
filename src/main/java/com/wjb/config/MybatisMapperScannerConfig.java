@@ -12,7 +12,7 @@ import java.util.Properties;
  * Created by Administrator on 2017/11/16.
  */
 @Configuration
-@MapperScan(basePackages = "com.wjb.*.mapper")
+@MapperScan(basePackages = "com.wjb.**.mapper")
 public class MybatisMapperScannerConfig {
     private static final Logger logger = Logger.getLogger(MybatisMapperScannerConfig.class);
     @Bean

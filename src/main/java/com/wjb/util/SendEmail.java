@@ -53,18 +53,18 @@ public class SendEmail {
         }
     }
 
-    public static void main(String[] args) {
-        //String email = "lgh_26@163.com";
-        //System.out.print(StringUtils.isBlank(email));
-        String to = "1523156110@qq.com";
-        //to = "862286777@qq.com";
-        String from = "service@lehe8.com";
-        String content = "<body><div style\"font-size:20px;\">"
-                + "<span>感谢您使用登辰充值卡回收平台。"
-                + "<span>&nbsp;&nbsp;您的验证码为："
-                + "<span style=\"font-size: 50px;color:red;\">&nbsp;&nbsp;0000</span></div></body>";
-        SendEmail.send(from, to, "登辰充值卡回收", content);
-    }
+//    public static void main(String[] args) {
+//        //String email = "lgh_26@163.com";
+//        //System.out.print(StringUtils.isBlank(email));
+//        String to = "1523156110@qq.com";
+//        //to = "862286777@qq.com";
+//        String from = "service@lehe8.com";
+//        String content = "<body><div style\"font-size:20px;\">"
+//                + "<span>感谢您使用登辰充值卡回收平台。"
+//                + "<span>&nbsp;&nbsp;您的验证码为："
+//                + "<span style=\"font-size: 50px;color:red;\">&nbsp;&nbsp;0000</span></div></body>";
+//        SendEmail.send(from, to, "登辰充值卡回收", content);
+//    }
 
 
 }
