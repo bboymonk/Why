@@ -5,7 +5,15 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Why</title>
     <link href="/css/ionic.min.css" rel="stylesheet">
+    <link rel="stylesheet" href='/css/my/dscountdown.css' type='text/css' media='all'/>
+    <link href="/css/my/font-awesome.css" rel="stylesheet">
+    <link href="/css/my/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600,700" rel="stylesheet">
     <script src="/js/ionic.bundle.min.js"></script>
+    <script type="text/javascript" src="/js/my/dscountdown.min.js"></script>
+    <script type="text/javascript" src="/js/my/jquery-1.11.1.min.js"></script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 <style>
     img {
@@ -16,22 +24,35 @@
 <body ng-app="myApp" ng-controller="myCtrl">
 <ion-view title="Home" hide-nav-bar="true">
     <ion-content class="card-background-page">
+        <h1 class="agile-head text-center">site Under maintenance</h1>
+        <div class="container-w3">
+            <div class="content1-w3layouts">
+                <img src="" alt="under-construction">
+                <p class="text-center">Sorry for the inconvenience.To improve our services, we have momentarily shutdown our site.</p>
+            </div>
+            <div class="demo2"></div>
+            <div class="content2-w3-agileits">
+                <form action="#" method="post" class="agile-info-form">
+                    <input type="email" class="email" placeholder="Enter your email address" required="">
+                    <input type="submit" value="get notified!">
+                    <div class="clear"> </div>
+                </form>
+            </div>
+            <div class="wthree-social-icons">
+                <ul class="w3-links">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+            </form>
+        </div>
+        </div>
+        <div class="agileits-w3layouts-copyright text-center">
+            <p>© 2017 Site Under Maintenance. All rights reserved | Design by <a href="//w3layouts.com/">W3layouts</a></p>
+        </div>
 
-        <ion-card>
-            <img src="http://bpic.588ku.com/back_pic/00/03/47/94561f0038f12c7.jpg"/>
-        </ion-card>
-
-        <ion-card>
-            <img src="http://bpic.588ku.com/back_pic/00/05/20/93562609194f1bb.jpg!/fh/300/quality/90/unsharp/true/compress/true"/>
-        </ion-card>
-
-        <ion-card>
-            <img src="http://bpic.588ku.com/back_pic/00/00/40/82/429efecb8eb13ab97f6ed9eced2bf01f.jpg"/>
-        </ion-card>
-
-        <ion-card>
-            <img src="http://bpic.588ku.com/back_pic/00/03/14/21561d1822c8563.jpg!/fh/300/quality/90/unsharp/true/compress/true"/>
-        </ion-card>
     </ion-content>
 </ion-view>
 
@@ -53,9 +74,13 @@
 </ion-footer-bar>
 </body>
 <script>
-    var app = angular.module('myApp', ['ionic']);
-    app.controller('myCtrl', function ($scope, $http) {
-
+    var app = angular.module('myApp',['ionic']);
+    app.controller('indexCtrl', function ($scope, $http, $interval, $timeout) {
+        alert(0);
+        $('.demo2').dsCountDown({
+            endDate: new Date("february 26, 2025 23:59:00"),
+            theme: 'black'
+        });
     })
 </script>
 </html>

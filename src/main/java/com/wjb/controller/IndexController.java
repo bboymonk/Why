@@ -35,6 +35,11 @@ public class IndexController {
         return "pages/hacker";
     }
 
+    @GetMapping("time")
+    public String time() {
+        return "pages/time";
+    }
+
     /**
      * 10秒钟爬一张图片
      *
