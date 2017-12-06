@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2017/11/27.
  */
@@ -21,6 +23,13 @@ public class CountryController {
     @GetMapping("get")
     public Country getCountry(Integer id,String name){
         return countryService.country(id,name);
+    }
+
+    @ResponseBody
+    @GetMapping("countrys")
+    public String countrys(){
+        String name = countryService.countrys();
+        return name;
     }
 
 

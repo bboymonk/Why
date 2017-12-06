@@ -41,18 +41,18 @@ spring:
       restart:
         exclude: templates/**,static/**
 #==================================================mybatis========================================#
-mybatis:
-  config-location: classpath:/mybatis-config.xml
-  mapper-locations: classpath:mapper/*.xml
+  mybatis:
+    config-location: classpath:/mybatis-config.xml
+    mapper-locations: classpath:mapper/*.xml
 #==================================================redis========================================#
-redis:
-    database: 0
-    host: 120.25.176.86
-    port: 6379
-    pool:
-      max-active: 8
-      max-wait: -1
-      max-idle: 8
-      min-idle: 0
-    timeout: 0
-    password: go2hell
+  redis:
+      database: 0
+      host: 192.168.0.192
+      port: 6379
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+      timeout: 0
+      password: 201314
