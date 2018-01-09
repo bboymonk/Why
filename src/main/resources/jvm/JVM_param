@@ -1,0 +1,4 @@
+//堆内存溢出输出到指定文件
+-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=d:/test.dump
+//方法区参数配置
+-XX:PermSize=64m(初始化内存大小) -XX:MaxPermSize=164m(最大内存大小)
