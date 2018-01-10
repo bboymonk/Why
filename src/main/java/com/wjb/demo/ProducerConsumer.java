@@ -1,4 +1,4 @@
-package com.wjb.util;
+package com.wjb.demo;
 
 /**
  * Created by wjb on 2018/1/9.
