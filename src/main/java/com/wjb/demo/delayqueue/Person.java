@@ -1,4 +1,4 @@
-package com.wjb.demo.delayblockingqueue;
+package com.wjb.demo.delayqueue;
 
 import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;

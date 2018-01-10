@@ -1,9 +1,10 @@
-package com.wjb.demo.delayblockingqueue;
+package com.wjb.demo.delayqueue;
 
 import java.util.concurrent.DelayQueue;
 
 /**
  * Created by wjb on 2018/1/10.
+ *  网 吧
  */
 public class DelayQueueDemo implements Runnable {
 
@@ -26,6 +27,7 @@ public class DelayQueueDemo implements Runnable {
         DelayQueueDemo delayQueueDemo = new DelayQueueDemo();
         Thread thread = new Thread(delayQueueDemo);
         thread.start();
+
         delayQueueDemo.work("a",123,1);
         delayQueueDemo.work("b",456,5);
         delayQueueDemo.work("c",789,10);
@@ -34,12 +36,18 @@ public class DelayQueueDemo implements Runnable {
 
     @Override
     public void run() {
-        while (true){
+        boolean flag = true;
+        while (flag){
             try {
                 Person person = this.queue.take();
                 stop(person);
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            }finally {
+                if (queue.isEmpty()){
+                    flag = false;
+                }
             }
         }
     }
