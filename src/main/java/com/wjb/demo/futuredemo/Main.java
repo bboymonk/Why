@@ -5,6 +5,7 @@ package com.wjb.demo.futuredemo;
  * 多线程Future模式 示例
  */
 public class Main {
+
     public static void main(String[] args) {
         FutureClient client = new FutureClient();
         //这里返回的暂时是空数据
