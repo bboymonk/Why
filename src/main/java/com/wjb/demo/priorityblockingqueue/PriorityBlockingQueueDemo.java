@@ -4,6 +4,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 /**
  * Created by wjb on 2018/1/10.
+ * 优先级队列示例
  */
 public class PriorityBlockingQueueDemo {
 

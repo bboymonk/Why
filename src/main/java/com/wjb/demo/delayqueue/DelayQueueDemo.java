@@ -4,6 +4,7 @@ import java.util.concurrent.DelayQueue;
 
 /**
  * Created by wjb on 2018/1/10.
+ * 延迟队列DelayQueue的示例
  *  网 吧
  */
 public class DelayQueueDemo implements Runnable {
